@@ -1,0 +1,6 @@
+[submodule "service-http-coap-interface"]
+	path = service-http-coap-interface
+	url = https://github.com/gotoiot/service-http-coap-interface.git
+[submodule "web-http-client"]
+	path = web-http-client
+	url = https://github.com/gotoiot/web-http-client.git

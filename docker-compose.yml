@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  http-coap-interface:
+    build:
+      context:    ./service-http-coap-interface
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    env_file:
+      - ./service-http-coap-interface/env
+    volumes:
+      - ./service-http-coap-interface/_service_storage:/app/_service_storage
+    expose:
+      - "5000"
+    network_mode: host
+
+  server-web-mqtt-client:
+    image: httpd:2.4
+    volumes:
+      - ./web-http-client:/usr/local/apache2/htdocs/
+    ports:
+      - "5001:80"
