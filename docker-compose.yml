@@ -5,8 +5,6 @@ services:
     build:
       context:    ./service-http-coap-interface
       dockerfile: Dockerfile
-    ports:
-      - "5000:5000"
     env_file:
       - ./service-http-coap-interface/env
     volumes:
